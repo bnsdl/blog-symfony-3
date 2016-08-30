@@ -1,0 +1,24 @@
+{% extends "BlogBlogBundle::layout.html.twig" %}
+
+{% block body %}
+
+
+    {{ form_start(form) }}
+
+        {{ form_errors(form) }}
+
+        {{ form_row(form.date) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.content) }}
+
+    {{ form_end(form) }}
+
+    <a href="http://localhost:8888/blog/web/app_dev.php/">Return</a>
+
+
+{% endblock %}
+
+{% block visitedArticles %}
+{% endblock %}
+
+

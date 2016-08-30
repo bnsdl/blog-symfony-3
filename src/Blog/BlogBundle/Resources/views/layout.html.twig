@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon petit blog de Simplon</title>
+    {% stylesheets '@BlogBlogBundle/Resources/public/css/main.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+</head>
+<body>
+    <div id="flex_container">
+        <div id="articles_list">
+            <h1>
+                {% block title %} {% endblock %}
+            </h1>
+
+            {% block body %} {% endblock %}
+        </div>
+
+        <div id="visited_list">
+
+                {% block visitedArticles %}
+
+                    <h4>
+                        Articles déjà visités :
+
+                    </h4>
+
+                    {% for article in visitedArticles %}
+
+                        <li>
+                            {{ article.title }}
+                        </li>
+
+                    {% endfor %}
+                {% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
+

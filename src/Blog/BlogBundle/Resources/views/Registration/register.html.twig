@@ -1,0 +1,22 @@
+{% extends "BlogBlogBundle::layout.html.twig" %}
+
+{% block body %}
+
+
+    {{ form_start(form) }}
+
+        {{ form_row(form.firstName) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.userName) }}
+        {{ form_row(form.mail) }}
+        {{ form_row(form.plainPassword.first) }}
+        {{ form_row(form.plainPassword.second) }}
+        <button type="submit">Register!</button>
+    {{ form_end(form) }}
+
+    <a href="http://localhost:8888/blog/web/app_dev.php/">Return</a>
+
+{% endblock %}
+
+{% block visitedArticles %}
+{% endblock %}

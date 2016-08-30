@@ -1,0 +1,20 @@
+{% extends "BlogBlogBundle::layout.html.twig" %}
+
+{% block body %}
+
+    <a href="http://localhost:8888/blog/web/app_dev.php/">
+        Return
+    </a>
+    <p>
+        Article n° {{ article.id }}
+    </p>
+    <p>
+        <h2>
+            {{ article.title }}
+        </h2>
+    </p>
+    <p>
+        {{ article.content }}
+    </p>
+
+{% endblock %}

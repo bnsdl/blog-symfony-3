@@ -1,0 +1,50 @@
+blog_blog_homepage:
+    path:     /
+    defaults:
+        _controller: BlogBlogBundle:Article:index
+
+blog_blog_article:
+    path:     /article/{id}
+    defaults:
+        _controller: BlogBlogBundle:Article:view
+    requirements:
+        id: \d+
+
+blog_blog_add_article:
+    path:     /add
+    defaults:
+        _controller: BlogBlogBundle:Article:add
+
+blog_blog_del_article:
+    path:     /delete/{id}
+    defaults:
+        _controller: BlogBlogBundle:Article:delete
+
+blog_blog_add_success:
+    path:     /add_success
+    defaults:
+        _controller: BlogBlogBundle:Article:add_success
+
+blog_blog_clear_session:
+    path:     /clearSession
+    defaults:
+        _controller: BlogBlogBundle:Article:clearSession
+
+blog_blog_admin:
+    path:     /admin
+    defaults:
+        _controller: BlogBlogBundle:Article:admin
+
+blog_blog_register:
+    path:     /register
+    defaults:
+        _controller: BlogBlogBundle:Registration:register
+
+logout:
+    path:   /logout
+
+login:
+    path:   /login
+    defaults:
+        _controller: BlogBlogBundle:Security:login
+

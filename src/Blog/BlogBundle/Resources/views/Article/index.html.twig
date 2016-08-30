@@ -1,0 +1,36 @@
+{% extends "BlogBlogBundle::layout.html.twig" %}
+
+
+{% block title %} {{ blog_title }} {% endblock %}
+
+{% block body %}
+
+    <ul id="articles">
+
+        {% for item in articles %}
+
+            <li> {{ item.id }} -
+                <a href="http://localhost:8888/blog/web/app_dev.php/article/{{ item.id }}">
+                    {{ item.title }}
+                </a>
+                <span style="margin-left: 20px">
+                    <a href="http://localhost:8888/blog/web/app_dev.php/delete/{{ item.id }}">X</a>
+                </span>
+            </li>
+
+        {% endfor %}
+
+    </ul>
+
+    <a href="http://localhost:8888/blog/web/app_dev.php/add">Ajout d'articles</a>
+
+{% endblock %}
+
+{% block visitedArticles %}
+
+    <a href="http://localhost:8888/blog/web/app_dev.php/clearSession">Vider la session</a>
+
+   {{ parent() }}
+
+{% endblock %}
+
